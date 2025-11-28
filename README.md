@@ -1,6 +1,6 @@
-# 🌐 Site Web - GEIGE (Grande École d'Ingénierie et de Gestion)
+# 🌐 Site Web - GEIGE (Grande École d'Informatique et de Gestion d'Entreprise)
 
-Site web officiel de la Grande École d'Ingénierie et de Gestion (GEIGE) - Plateforme de présentation de l'établissement, des formations et de la vie étudiante.
+Site web officiel de la Grande École d'Informatique et de Gestion d'Entreprise (GEIGE) - Plateforme de présentation de l'établissement, des formations et de la vie étudiante.
 
 ## 🚀 À propos
 
