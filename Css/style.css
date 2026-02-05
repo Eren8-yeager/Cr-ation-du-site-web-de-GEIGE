@@ -100,3 +100,129 @@ ul a:hover {
   text-decoration: none;
   color: #fff;
 }
+
+/*Section de statistiques*/
+.stat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  width: 20%;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+.sta p {
+  margin: 0;
+}
+
+.bg {
+  font-size: 70px;
+  font-weight: bold;
+  color: #001675;
+}
+
+.pt {
+  font-size: 20px;
+  font-weight: bold;
+  color : #001675
+}
+
+.sta:hover {
+  background-color: #F4F4F4;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+/*Section d'apercu*/
+.apercu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  margin-top: 5%;
+  gap: 60px;
+  background-color: #F4F4F4;
+}
+
+.texteapercu {
+  flex: 0 0 40%;
+  max-width: 500px;
+}
+
+.texteapercu h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.texteapercu p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #060505;
+  margin-bottom: 30px;
+}
+
+.texteapercu a {
+  color: #4e00cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.imageapercu {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  min-width: 600px;
+}
+
+.imageapercu img {
+  position: absolute;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageapercu img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.img1 {
+  width: 350px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.img2 {
+  width: 380px;
+  height: 260px;
+  top: 240px;
+  left: 0;
+  border-radius: 25px;
+  z-index: 3;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.img3 {
+  width: 420px;
+  height: 480px;
+  top: 10px;
+  right: 0;
+  border-radius: 25px;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
