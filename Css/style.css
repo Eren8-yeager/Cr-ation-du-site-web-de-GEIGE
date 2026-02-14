@@ -226,3 +226,42 @@ ul a:hover {
   z-index: 1;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
+
+/*Section d'accès rapide*/
+.titre {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15vh;
+}
+
+.acces-rapide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid black;
+  gap: 20px;
+  padding: 5vh;
+}
+
+.acces-rapide img {
+  height: 50px;
+}
+
+.acces-rapide a {
+  color: #4e00cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nos-formation, .qui-sommes-nous, .actualites {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  padding: 3vh;
+  width: 50vh;
+  border: 1px solid #ADABAB;
+  background-color: #F9F9F9;
+  border-radius: 10px ;
+}
