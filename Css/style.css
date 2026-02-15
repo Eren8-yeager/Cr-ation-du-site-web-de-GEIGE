@@ -241,9 +241,12 @@ ul a:hover {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  border: 2px solid black;
   gap: 20px;
   padding: 5vh;
+}
+
+.doc {
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .acces-rapide img {
@@ -264,4 +267,9 @@ ul a:hover {
   border: 1px solid #ADABAB;
   background-color: #F9F9F9;
   border-radius: 10px ;
+}
+
+.doc:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
