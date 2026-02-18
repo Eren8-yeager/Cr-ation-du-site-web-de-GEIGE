@@ -325,7 +325,8 @@ ul a:hover {
 .pied {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   background-color: #001D45;
   padding: 2vh;
 }
@@ -415,6 +416,10 @@ ul a:hover {
   color: #3C41E8;
 }
 
+.social-links a:hover {
+  transform: scale(1.06);
+}
+
 .social-links i {
   font-size: 4vh;
 }
@@ -422,6 +427,17 @@ ul a:hover {
 .social-links i:hover {
   color: #ffff;
   transition: 0.2s;
-  box-shadow: 0 10px 30px rgba(217, 212, 212, 0.15);
-  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.fin {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #fff;
+  margin-top: 5vh;
+}
+
+.fin p {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
