@@ -402,3 +402,26 @@ ul a:hover {
   color: #3C41E8;
   transition: 0.2s;
 }
+
+.social-links {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 5vh;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #3C41E8;
+}
+
+.social-links i {
+  font-size: 4vh;
+}
+
+.social-links i:hover {
+  color: #ffff;
+  transition: 0.2s;
+  box-shadow: 0 10px 30px rgba(217, 212, 212, 0.15);
+  transform: scale(1.05);
+}
