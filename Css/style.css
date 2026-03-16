@@ -45,10 +45,29 @@ ul a:hover {
 }
 
 .image {
-  background-image: url(../Img/img2.jpg);
   height: 100vh;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.sname {
+  position: relative;
+  z-index: 10;
 }
 
 .sname {
@@ -152,11 +171,21 @@ ul a:hover {
   margin-top: 5%;
   gap: 60px;
   background-color: #F4F4F4;
+  overflow: hidden;
 }
 
+/* ── Texte : glisse depuis la gauche ── */
 .texteapercu {
   flex: 0 0 40%;
   max-width: 500px;
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.texteapercu.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .texteapercu h1 {
@@ -179,24 +208,56 @@ ul a:hover {
   font-weight: 500;
 }
 
+/* ── Conteneur images : glisse depuis la droite ── */
 .imageapercu {
   flex: 1;
   position: relative;
   height: 500px;
   min-width: 600px;
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+.imageapercu.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Images : apparaissent en montant avec délai ── */
 .imageapercu img {
   position: absolute;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .imageapercu img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
+/* Quand le conteneur devient visible, les images apparaissent en cascade */
+.imageapercu.visible .img1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.imageapercu.visible .img2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.imageapercu.visible .img3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+/* ── Styles originaux des images ── */
 .img1 {
   width: 350px;
   height: 400px;
