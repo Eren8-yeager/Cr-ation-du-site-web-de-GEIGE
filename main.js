@@ -23,7 +23,7 @@ setInterval(() => {
   slides[currentIndex].classList.remove('active'); // fondu sortant
   currentIndex = (currentIndex + 1) % slides.length;
   slides[currentIndex].classList.add('active');    // fondu entrant
-}, 10000);
+}, 5000);
 
   //Effet de Reveal and Scroll sur la section d'aperçu
 
