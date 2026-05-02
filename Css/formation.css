@@ -1,0 +1,180 @@
+/*Barre de navigation et téléchargement de brochure*/
+.download {
+    background-color: #1A1F70;
+}
+
+.texte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 45vh;
+    padding-top: 5px; /* ← ajuste cette valeur selon ton goût */
+    justify-content: flex-start; /* ← remplace justify-content: center */
+}
+
+.texte h1 {
+    font-size: 10vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.texte p {
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'Manrope', sans-serif;
+    font-style: italic;
+    color: #ffff;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/*Div filières*/
+.filiere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 6vh;
+    gap: 5vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.filiere .f1 , .f2{
+    font-size: 20px;
+}
+
+.filiere .f1 a , .f2 a{
+    text-decoration: none;
+}
+
+.f1, .f2 {
+    position: relative;
+    text-align: center;
+}
+
+.filiere a{
+    color: #545252;
+    transition: 0.1s;
+}
+
+.filiere a:hover {
+    color: rgb(31, 31, 162);;
+}
+
+.f1.active a, .f2.active a {
+    color: #4E46ED !important; /* ← force la couleur active */
+}
+
+.f1::after, .f2::after {
+    content: '';
+    display: block;
+    width: 11rem;
+    height: 4px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.f1.active::after, .f2.active::after {
+    background-color: #4E46ED;
+}
+
+/*Section Filières*/
+.nos-filieres h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 7vh;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.nos-filieres p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: #545252;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 0;
+}
+
+.nos-filieres {
+    margin-top: 10vh;
+}
+
+.all-titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.all-titre img {
+    width: 30px;  /* ajuste la taille selon ton icône */
+    height: 30px;
+}
+
+.cod {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
+    padding: 5vh;
+    flex-wrap: wrap;
+    box-sizing: border-box; /* ← important */
+}
+
+.all {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    padding: 1vh;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box; /* ← crucial */
+    border: 1px solid #ADABAB;
+    border-radius: 3vh;
+    text-align: center;
+    padding-bottom: 3vh;
+    box-shadow: 6px -7px 14px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* ← manquait ! */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.for {
+    font-size: 18px;
+    width: 25vh;
+    height: 4vh;
+    display: inline-block;
+    padding: 8px 20px; /* ← haut/bas gauche/droite équilibré */
+    line-height: normal; /* ← corrige l'enfoncement du texte */
+    font-family: 'Manrope';
+    font-weight: bold;
+    border-radius: 2vh;
+}
+
+.for:hover {
+    transform: scale(1.02);
+    background-color: #120ba3;
+    color: white;
+}
+
+.btn-container {
+    margin-top: auto; /* ← pousse le bouton en bas */
+    display: flex;
+    justify-content: center;
+}
+
+.all-titre h2 {
+    min-height: 80px; /* ← force la même hauteur pour tous les titres */
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.all p {
+    min-height: 80px; /* ← même hauteur pour tous les paragraphes */
+}

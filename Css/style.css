@@ -39,6 +39,14 @@ ul a:hover {
   transform: scale(1.05);
 }
 
+.nav-active {
+    background-color: #1A1F70 !important;
+    border: 1px solid #1A1F70;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
 /*Section de présentation*/
 .presentation-image {
   margin-top: 5px;

@@ -40,3 +40,14 @@ setInterval(() => {
 
 observer.observe(document.querySelector('.texteapercu'));
 observer.observe(document.querySelector('.imageapercu'));
+
+// Implementation du système d'onglets dans la page formation
+function showFiliere(id) {
+    document.querySelectorAll('.filiere-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.filiere p').forEach(el => el.classList.remove('active'));
+
+    document.getElementById(id).style.display = 'block';
+
+    if (id === 'industrielle') document.querySelector('.f1').classList.add('active');
+    if (id === 'tertiaire') document.querySelector('.f2').classList.add('active');
+}
