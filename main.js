@@ -8,22 +8,24 @@ const images = [
 const slideshow = document.getElementById('slideshow');
 
 // Créer une div par image
-images.forEach((src, i) => {
-  const slide = document.createElement('div');
-  slide.classList.add('slide');
-  slide.style.backgroundImage = `url('${src}')`;
-  if (i === 0) slide.classList.add('active');
-  slideshow.insertBefore(slide, slideshow.firstChild);
-});
+if (slideshow) {
+  images.forEach((src, i) => {
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.style.backgroundImage = `url('${src}')`;
+    if (i === 0) slide.classList.add('active');
+    slideshow.insertBefore(slide, slideshow.firstChild);
+  });
 
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
 
-setInterval(() => {
-  slides[currentIndex].classList.remove('active'); // fondu sortant
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].classList.add('active');    // fondu entrant
-}, 5000);
+  setInterval(() => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }, 5000);
+}
 
   //Effet de Reveal and Scroll sur la section d'aperçu
 
@@ -38,9 +40,7 @@ setInterval(() => {
   threshold: 0.2
 });
 
-observer.observe(document.querySelector('.texteapercu'));
-observer.observe(document.querySelector('.imageapercu'));
-
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Implementation du système d'onglets dans la page formation
 function showFiliere(id) {
     document.querySelectorAll('.filiere-content').forEach(el => el.style.display = 'none');
@@ -51,3 +51,13 @@ function showFiliere(id) {
     if (id === 'industrielle') document.querySelector('.f1').classList.add('active');
     if (id === 'tertiaire') document.querySelector('.f2').classList.add('active');
 }
+
+/*Champ de saisie (apparait lorsque l'utilisateur clique sur le motif autre - page contact) */
+  function verifier(select) {
+    const champAutre = document.getElementById('motif-autre');
+    if (select.value === 'autre') {
+      champAutre.style.display = 'block';
+    } else {
+      champAutre.style.display = 'none';
+    }
+  }

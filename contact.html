@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Grande Ecole d'Informatique et de Gestion d'Entreprise (GEIGE)
+    </title>
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="./Css/formation.css" />
+    <link rel="stylesheet" href="./Css/contact.css" />
+    <link rel="icon" type="image/png" href="./Img/Logo Geige.jpg" />
+    <!-- À ajouter dans le <head> de votre page -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <header class="site-header">
+      <div class="logo">
+        <img src="./Img/Logo Geige.jpg" alt="Logo de Geige" />
+      </div>
+
+      <div class="menu">
+        <ul>
+          <a href="./accueil.html">ACCUEIL</a>
+        </ul>
+        <ul>
+          <a href="#">A PROPOS</a>
+        </ul>
+        <ul>
+          <a href="#">TARIFS</a>
+        </ul>
+        <ul>
+          <a href="./formations.html">FORMATIONS</a>
+        </ul>
+        <ul>
+          <a href="#">CAMPUS</a>
+        </ul>
+        <ul>
+          <a href="#">ACTUALITES</a>
+        </ul>
+        <ul>
+          <a href="./contact.html" class="nav-active">CONTACT</a>
+        </ul>
+      </div>
+    </header>
+
+    <!--Section Contactez nous-->
+    <section class="contact">
+      <div class="texte pr reveal">
+        <h1>Contactez-nous</h1>
+        <p>
+          Notre équipe se tient entièrement à votre disposition afin de répondre
+          <br />
+          avec diligence à l’ensemble de vos interrogations.
+        </p>
+        <a href="#section" class="btns"
+          >Voir plus &nbsp;<i class="bi bi-arrow-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!--Section Nos informations-->
+    <section class="nos-infos" id="section">
+      <div class="nf">
+        <h1>Nos informations</h1>
+      </div>
+
+      <div class="cards reveal">
+        <div class="adr info">
+          <i class="bi bi-geo-alt"></i>
+          <h2>Adresse</h2>
+          <p>
+            Rues Des Jardins, Face Station Corlay <br />
+            - Deux-plateaux - Vallon - Cocody
+          </p>
+        </div>
+
+        <div class="tel info">
+          <i class="bi bi-telephone"></i>
+          <h2>Téléphone</h2>
+          <p>(+225) 01 73 29 48 90</p>
+        </div>
+
+        <div class="hor info">
+          <i class="bi bi-clock"></i>
+          <h2>Horaires</h2>
+          <p>
+            Lundi - Vendredi: 8h00 - 17h00 <br />
+            Samedi: 8h00 - 12h00 <br />
+            Dimanche: Fermé
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section champ de message et map -->
+    <section class="message">
+      <div class="champ reveal">
+        <h1>Adressez nous un message</h1>
+        <p>Nous vous répondrons dans le plus bref délais</p>
+        <div class="champsaisie">
+          <div class="t1">
+            <label for="text" style="color: black"
+              >Nom - Prénoms <span style="color: red">*</span></label
+            >
+            <br />
+            <input type="text" placeholder="Votre nom complet" /> <br />
+
+            <label for="text" style="color: black"
+              >Téléphone<span style="color: red">*</span></label
+            >
+            <br />
+            <input type="text" placeholder="(+225) 0X XX XX XX XX" /> <br />
+          </div>
+
+          <div class="t2">
+            <label for="text" style="color: black"
+              >Email <span style="color: red">*</span></label
+            >
+            <br />
+            <input type="email" placeholder="Votre @email.com" /> <br />
+
+            <label for="sujet">Motif <span style="color: red">*</span></label>
+            <br />
+            <select name="motif" id="motif" onchange="verifier(this)">
+              <option value="">-- Selectionner un motif --</option>
+              <option value="inscription">Demande d'admission</option>
+              <option value="formation">Demande d'information</option>
+              <option value="tarif">Demande de tarif des formations</option>
+              <option value="autre">Autre</option>
+            </select>
+
+            <!-- Champ de saisie cachée -->
+            <input type="text" id="motif-autre" placeholder="Précisez votre motif..." style="display: none"/>
+          </div>
+        </div>
+
+        <label for="message">Message <span style="color: red">*</span></label>
+        <textarea id="message" placeholder="Décrivez votre demande"></textarea>
+        <br />
+
+        <a href="#" class="btns"
+          >Envoyez le message &nbsp;<i class="bi bi-send"></i
+        ></a>
+      </div>
+
+      <div class="map reveal">
+        <h1>Nos Coordonnées</h1>
+        <div class="service-header">
+          <img src="./Img/robot.png" alt="logo-robot" />
+          <h2>Service Client</h2>
+        </div>
+        <p>
+          Notre équipe se tient à votre entière disposition pour répondre à
+          l’ensemble de vos interrogations, du lundi au vendredi.
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.8477030454164!2d-3.994488925256528!3d5.355978294622754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb7b197aa427%3A0x754e874194c8197e!2sGeige!5e1!3m2!1sen!2sci!4v1780754269970!5m2!1sen!2sci"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div class="aide">
+          <h2>Besoin d'aide immédiate ?</h2>
+          <p>Appelez nous directement au numéro suivant :</p>
+          <i class="bi bi-telephone-plus">
+            <a href="tel: (+225) 01 73 29 48 90 ">(+225) 01 73 29 48 90</a></i
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Section de pied de page -->
+    <footer class="pied">
+      <div class="img">
+        <img src="./Img/Logo Geige.jpg" alt="Logo de Geige" />
+      </div>
+
+      <div class="description">
+        <p>
+          Les écoles jouent un rôle crucial dans le développement intellectuel
+          et l'avenir des élèves. Elles offrent un environnement structuré où
+          les élèves peuvent apprendre et s'épanouir, tant sur le plan scolaire
+          que social.
+        </p>
+
+        <!--Icônes des réseaux sociaux-->
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/profile.php?id=61551873515585"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@user9552123931566"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="./accueil.html" class="social-link" target="_blank">
+            <i class="bi bi-browser-chrome"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="liens">
+        <h1>Liens</h1>
+        <a href="#">A Propos</a>
+        <a href="#">Tarifs</a>
+        <a href="./formations.html">Formations</a>
+        <a href="#">Campus</a>
+        <a href="#">Actualités</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="infos">
+        <h1>Contact</h1>
+        <i class="bi bi-telephone"> <a href="#">(+225) 01 73 29 48 90</a></i>
+        <i class="bi bi-envelope"> <a href="#">geige20@gmail.com</a></i>
+        <i class="bi bi-geo-alt">
+          <a href="#"
+            >Rues Des Jardins, Face Station Corlay - Deux-plateaux - Vallon
+            Cocody</a
+          ></i
+        >
+      </div>
+
+      <div class="fin">
+        <p>© 2026 GEIGE - All Rights Reserved</p>
+      </div>
+    </footer>
+    <!--Icône d'assistance-->
+    <div class="assistant-btn">
+      <i class="bi bi-robot"></i>
+    </div>
+    <script src="./main.js" defer></script>
+  </body>
+</html>
