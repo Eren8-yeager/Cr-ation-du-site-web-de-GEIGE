@@ -1,0 +1,102 @@
+
+/*Effet de scroll smooth*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Section Actualités et Évènements*/
+.actu {
+    background-image: url(../Img/African\ culture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 35vh;
+}
+
+/* L'image de fond */
+.actu::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(../Img/African\ culture.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    scale: 1.05;
+    z-index: 0;
+}
+
+/* Overlay sombre bleuté */
+.actu::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 30, 100, 0.65); /* sombre + bleu, ajuste l'opacité */
+    z-index: 1;
+}
+
+/* Texte net au-dessus de tout */
+.actu .texte {
+    position: relative;
+    z-index: 2;
+}
+
+/*Trait jaune en dessous du paragraphe P*/
+.texte p::after {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 4px;
+    background-color: #AEB735;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+}
+
+/*Section Titre*/
+.tte {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid #D7C9C9;
+    margin: 20px auto;
+    width: 90%; /* ajuste cette valeur */
+    border-radius: 20px;
+}
+
+.avenir p, .fete p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.avenir .p2, .fete .p3{
+    color: #09005B;
+    font-weight: bolder;
+}
+
+.fete p {
+    color: #AEB735;
+}
+
+.avenir .p2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #09005B;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.fete .p3::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #AEB735;
+    border-radius: 10px;
+    margin-top: 8px;
+}
